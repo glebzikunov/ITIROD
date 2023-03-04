@@ -1,0 +1,16 @@
+D:\Яичная скорлупка\Dev\C#\6sem\UDPChat\bin\Debug\net5.0\UDPChat.exe
+D:\Яичная скорлупка\Dev\C#\6sem\UDPChat\bin\Debug\net5.0\UDPChat.deps.json
+D:\Яичная скорлупка\Dev\C#\6sem\UDPChat\bin\Debug\net5.0\UDPChat.runtimeconfig.json
+D:\Яичная скорлупка\Dev\C#\6sem\UDPChat\bin\Debug\net5.0\UDPChat.runtimeconfig.dev.json
+D:\Яичная скорлупка\Dev\C#\6sem\UDPChat\bin\Debug\net5.0\UDPChat.dll
+D:\Яичная скорлупка\Dev\C#\6sem\UDPChat\bin\Debug\net5.0\ref\UDPChat.dll
+D:\Яичная скорлупка\Dev\C#\6sem\UDPChat\bin\Debug\net5.0\UDPChat.pdb
+D:\Яичная скорлупка\Dev\C#\6sem\UDPChat\obj\Debug\net5.0\UDPChat.csproj.AssemblyReference.cache
+D:\Яичная скорлупка\Dev\C#\6sem\UDPChat\obj\Debug\net5.0\UDPChat.GeneratedMSBuildEditorConfig.editorconfig
+D:\Яичная скорлупка\Dev\C#\6sem\UDPChat\obj\Debug\net5.0\UDPChat.AssemblyInfoInputs.cache
+D:\Яичная скорлупка\Dev\C#\6sem\UDPChat\obj\Debug\net5.0\UDPChat.AssemblyInfo.cs
+D:\Яичная скорлупка\Dev\C#\6sem\UDPChat\obj\Debug\net5.0\UDPChat.csproj.CoreCompileInputs.cache
+D:\Яичная скорлупка\Dev\C#\6sem\UDPChat\obj\Debug\net5.0\UDPChat.dll
+D:\Яичная скорлупка\Dev\C#\6sem\UDPChat\obj\Debug\net5.0\ref\UDPChat.dll
+D:\Яичная скорлупка\Dev\C#\6sem\UDPChat\obj\Debug\net5.0\UDPChat.pdb
+D:\Яичная скорлупка\Dev\C#\6sem\UDPChat\obj\Debug\net5.0\UDPChat.genruntimeconfig.cache
