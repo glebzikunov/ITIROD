@@ -105,18 +105,18 @@
 
   .heading-block__title {
     max-width: 100%;
-    font-size: 60px;
+    font-size: 50px;
     margin: 14px 0px 0px 0px;
   }
 
   .heading-block__text-wrapper {
     max-width: none;
-    margin: 0px 0px 20px 0px;
+    margin: 0px 0px 10px 0px;
   }
 
   .heading-block__text {
     max-width: 650px;
-    padding: 22px 0px 0px 0px;
+    padding: 10px 0px 0px 0px;
     line-height: 1.87;
   }
 
@@ -130,6 +130,10 @@
 
 /* MOBILE */
 @media (max-width: 767.98px) {
+  .first-section {
+    padding: 0px 0px 50px 0px;
+  }
+
   .first-section__heading-block {
     flex-direction: column;
   }
@@ -140,7 +144,7 @@
 
   .heading-block__title {
     max-width: 100%;
-    font-size: 46px;
+    font-size: 40px;
     margin: 14px 0px 0px 0px;
   }
 
