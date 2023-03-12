@@ -1,0 +1,133 @@
+.six-section {
+  background-color: #022ABF;
+  min-height: 460px;
+}
+.six-section__container {
+}
+
+.six-section__numbers-block {
+  display: flex;
+}
+
+.numbers-block {
+  
+}
+
+.numbers-block__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.numbers-block__numbers-text-block {
+  display: flex;
+  margin: 60px 0px 40px 0px;
+}
+
+.numbers-text-block__wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 438px;
+}
+
+.numbers-text-block__title {
+  font-size: 70px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.numbers-text-block__subtitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: #A2B6FF;
+}
+
+.number-block__numbers-section {
+  display: flex;
+}
+
+.numbers-section {
+
+}
+
+.numbers-section__wrapper {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+}
+
+.numbers-section__number-card {
+  display: flex;
+  flex: 0 0 25%;
+}
+
+.number-card {
+
+}
+
+.number-card__wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 317px;
+  min-height: 174px;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  padding: 10px;
+}
+
+
+.number-card__title {
+  font-family: "Open Sans";
+  color: #fff;
+  margin: 0px 0px 25px 0px;
+}
+.number-card__text {
+  font-size: 59px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* TABLET */
+@media (max-width: 991.98px) {
+  .numbers-section__number-card {
+    display: flex;
+    flex: 0 0 50%;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 767.98px) {
+  .six-section {
+    min-height: none;
+  }
+
+  .numbers-section__wrapper {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .numbers-text-block__title {
+    font-size: 44px;
+  }
+
+  .numbers-section__number-card {
+    flex-direction: column;
+    flex: 1 1 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .number-card__wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 317px;
+    min-height: 174px;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+    padding: 10px;
+  }
+}
