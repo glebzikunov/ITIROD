@@ -1,0 +1,248 @@
+.register-section {
+}
+.register-section__container {
+}
+.register-section__register-card {
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+}
+.register-card {
+}
+.register-card__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 650px;
+  min-height: 600px;
+  border: 2px solid #022ABF;
+  border-radius: 49px;
+}
+.register-card__header {
+  max-width: 513.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 0px 49px 0px;
+  padding: 0px 15px 0px 15px;
+
+}
+.register-card__title {
+  font-size: 55px;
+  font-family: "Exo 2";
+  font-weight: 700;
+  line-height: 1.3;
+  color: #022ABF;
+  margin: 0px 0px 6px 0px;
+}
+.register-card__subtitle {
+  text-align: center;
+  font-size: 23px;
+  font-family: "Exo 2";
+  line-height: 1.3;
+  color: #464646;
+}
+.register-card__register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.register-form {
+}
+.register-form__input-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0px 0px 32px 0px;
+  padding: 0px 15px 0px 15px;
+}
+.register-form__item {
+  width: 100%;
+  max-width: 575px;
+}
+
+.register-form__item:not(:last-child) {
+  margin: 0px 0px 23px 0px;
+}
+
+.register-form__username {
+  width: 100%;
+  font-size: 23px;
+  font-family: "Exo 2";
+  color: #464646;
+  padding: 32px 0px 32px 35px;
+  border: 2px solid #464646;
+  border-radius: 15px;
+}
+
+.register-form__password {
+  width: 100%;
+  font-size: 23px;
+  font-family: "Exo 2";
+  color: #464646;
+  padding: 32px 0px 32px 35px;
+  border: 2px solid #464646;
+  border-radius: 15px;
+}
+.register-form__item-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 421px;
+  min-height: 90px;
+  margin: 0px 0px 17px 0px;
+  padding: 0px 15px 0px 15px;
+}
+.register-form__buttom {
+  width: 100%;
+  max-width: 391px;
+  min-height: 90px;
+  border: 2px solid #022ABF;
+  border-radius: 23px;
+  font-size: 33px;
+  font-family: "Exo 2";
+  font-weight: 700;
+  color: #022ABF;
+  background-color: #fff;
+  transition: all 0.15s;
+}
+
+.register-form__buttom:hover {
+  color: #fff;
+  background-color: #022ABF;
+}
+
+.register-card__footer {
+  display: flex;
+  width: 100%;
+  max-width: 326px;
+  justify-content: center;
+}
+.register-card__text {
+  font-size: 21px;
+  font-family: "Exo 2";
+  color: #464646;
+  margin: 0px 10px 0px 0px;
+}
+.register-card__login-link {
+  font-size: 21px;
+  font-family: "Exo 2";
+  color: #464646;
+  text-decoration: underline;
+  transition: all 0.15s;
+}
+.register-card__login-link:hover {
+  color: #022ABF;
+}
+
+/* PC */
+@media (max-width: 1426px) {
+  .register-card__wrapper {
+    width: 100%;
+    max-width: 470px;
+    min-height: 470px;
+    border-radius: 39px;
+  }
+
+  .register-card__header {
+    max-width: 413.5px;  
+    margin: 0px 0px 29px 0px;
+  }
+  .register-card__title {
+    font-size: 42px;
+    margin: 0px 0px 6px 0px;
+  }
+  .register-card__subtitle {
+    font-size: 19px;
+  }
+
+  .register-form__input-block {
+    margin: 0px 0px 17px 0px;
+  }
+
+  .register-form__item {
+    width: 100%;
+    max-width: 575px;
+  }
+  
+  .register-form__item:not(:last-child) {
+    margin: 0px 0px 23px 0px;
+  }
+  
+  .register-form__username {
+    font-size: 18px;
+    padding: 16px 0px 16px 20px;
+    border-radius: 12px;
+  }
+  
+  .register-form__password {
+    font-size: 18px;
+    padding: 16px 0px 16px 20px;
+    border-radius: 12px;
+  }
+
+  .register-form__item-button {
+    margin: 0px 0px 17px 0px;
+    padding: 0px 15px 0px 15px;
+  }
+
+  .register-form__buttom {
+    max-width: 261px;
+    min-height: 62px;
+    border-radius: 20px;
+    font-size: 25px;
+  }
+
+  .register-card__text {
+    font-size: 17px;
+  }
+  .register-card__login-link {
+    font-size: 17px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 767.98px) {
+  .register-card__wrapper {
+    max-width: 400px;
+    min-height: 470px;
+    border-radius: 33px;
+  }
+
+  .register-card__header {
+    max-width: 373.5px;  
+  }
+
+  .register-card__title {
+    font-size: 38px;
+  }
+
+  .register-card__subtitle {
+    font-size: 17px;
+  }
+
+  .register-form__input-block {
+    margin: 0px 0px 17px 0px;
+  }
+
+  .register-form__buttom {
+    max-width: 181px;
+    font-size: 22px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 400px) {
+  .register-card__title {
+    font-size: 28px;
+  }
+
+  .register-card__subtitle {
+    font-size: 14px;
+  }
+}
