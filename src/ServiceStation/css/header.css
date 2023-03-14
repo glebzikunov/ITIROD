@@ -4,7 +4,7 @@
 
 .header__container {
   display: flex;
-  min-height: 192px;
+  min-height: 150px;
   align-items: center;
 }
 
@@ -43,6 +43,8 @@
 .menu__item-avatar {
   max-width: 70px;
   min-height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 /* PC */
