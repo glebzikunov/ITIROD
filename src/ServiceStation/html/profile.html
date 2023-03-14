@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet "/>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/profile-section.css">
   <title>Profile</title>
 </head>
 <body>
@@ -28,7 +29,7 @@
             <li class="menu__item"><a href="" class="menu__link">Logout</a></li>
             <li class="menu__item">
               <a href="/html/profile.html" class="menu__link">
-                <img class="menu__item-avatar" src="/images/Avatar.jpg" alt="Profile Avatar">
+                <img class="menu__item-avatar" src="/images/Profile-avatar.jpg" alt="Profile Avatar">
               </a>
             </li>
           </ul>
@@ -40,6 +41,35 @@
         </div>
       </div>
     </header>
+    <main class="main">
+      <section class="profile-section">
+        <div class="profile-section__container">
+          <div class="profile-section__profile-card profile-card">
+            <div class="profile-card__wrapper">
+              <div class="profile-card__card-header card-header">
+                <div class="card-header__image-block image-block">
+                  <img class="image-block__background" src="/images/Profile-background.jpg" alt="Profile Background">
+                  <img src="/images/Profile-avatar.jpg" alt="Profile Picture" class="image-block__profile-picture">
+                </div>
+              </div>
+              <input type="file" id="file" accept="image/*">
+              <label class="picture-change-label" for="file">IMAGE</label>
+              <div class="profile-card__input-block">
+                <div class="profile-card__item">
+                  <input class="profile-card-username" type="text" placeholder="Email">
+                </div>
+                <div class="profile-card__item">
+                  <input class="profile-card-password" type="password" placeholder="Password">
+                </div>
+              </div>
+              <div class="profile-card__card-footer">
+                <button type="submit" class="card-footer__update">UPDATE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="/js/script.js"></script>
