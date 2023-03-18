@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet "/>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/booking-header.css">
   <title>Booking</title>
 </head>
 <body>
@@ -41,10 +42,34 @@
       </div>
     </header>
     <main class="main">
-
+      <section class="booking-header-section">
+        <div class="booking-header-section__container">
+          <div class="booking-header-section__booking-header booking-header">
+            <h1 class="booking-header__title">Booking</h1>
+            <div class="booking-header__sort-block sort-block">
+              <h2 class="sort-block__title">Sort By</h2>
+              <div class="sort-block__dropdown dropdown">
+                <div class="dropdown__select">
+                  <span class="dropdown__selected">All Booking</span>
+                  <div class="dropdown__caret"></div>
+                </div>
+                <ul class="dropdown__menu">
+                  <li>Approved</li>
+                  <li>Pending</li>
+                  <li class="dropdown__item-active">All Booking</li>
+                  <li>Recently Created</li>
+                  <li>Last Created</li>
+                </ul>
+              </div>
+            </div>
+            <button class="booking-header__book-btn">BOOK</button>
+          </div>
+        </div>
+      </section>
     </main>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="/js/script.js"></script>
+  <script src="/js/dropdown.js"></script>
 </body>
 </html>
