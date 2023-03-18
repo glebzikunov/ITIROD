@@ -1,0 +1,271 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-section {
+  flex: 1 1 auto;
+  background-color: #F7F8FB;
+}
+
+.booking-section__container {
+  display: flex;
+}
+
+.booking-section__wrapper {
+  width: 100%;
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-section__title-section {
+  width: 100%;
+  max-width: 1252px;
+  display: flex;
+  margin: 50px 0px 20px 0px;
+  align-items: center;
+}
+
+.title-section {
+}
+
+.title-section__line {
+  width: 73px;
+  border-top: 2px solid #022ABF;
+  margin-top: 0;
+  margin: 0px 30px 0px 18px;
+}
+
+.title-section__wrapper {
+  width: 100%;
+  max-width: 1131px;
+  min-height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-section__username,
+.title-section__vehicle-model,
+.title-section__service-type,
+.title-section__date,
+.title-section__status {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.booking-section__history-section {
+  display: flex;
+}
+
+.history-section {
+}
+
+.history-section__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.history-section__history-card {
+  width: 100%;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 0px 0px 20px 0px ;
+}
+
+.history-card {
+}
+
+.history-card__avatar {
+  max-width: 70px;
+  min-height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0px 31px 0px 20px;
+}
+
+.history-card__wrapper {
+  width: 100%;
+  max-width: 1242px;
+  display: flex;
+  align-items: center;
+}
+
+.history-card__username,
+.history-card__vehicle-model,
+.history-card__service-type,
+.history-card__date,
+.history-card__status {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+}
+
+.history-card__username {
+  width: 100%;
+  max-width: 240px;
+  margin: 0px 21px 0px 0px ;
+}
+
+.history-card__vehicle-model {
+  width: 100%;
+  max-width: 240px;
+  margin: 0px 66px 0px 0px ;
+}
+
+.history-card__service-type {
+  width: 100%;
+  max-width: 100px;
+  margin: 0px 187px 0px 0px ;
+}
+
+.history-card__date {
+  width: 100%;
+  max-width: 158px;
+  margin: 0px 28px 0px 0px ;
+}
+
+.history-card__status {
+  border-radius: 25px;
+  font-size: 20;
+  font-weight: 700;
+  background-color: #4AD7BD;
+  color: #1B4E50;
+  padding: 12px 10px;
+  margin: 0px 62px 0px 0px ;
+}
+
+.history-card__checkbox {
+  align-self: center;
+  width: 30px;
+  height: 30px;
+}
+
+/* PC */
+@media (max-width: 1426px) {
+  .title-section__line {
+    margin: 0px 30px 0px 23px;
+  }
+
+  .title-section__wrapper {
+    column-gap: 80px;
+    justify-content: flex-start;
+  }
+
+  .title-section__username,
+  .title-section__vehicle-model,
+  .title-section__service-type,
+  .title-section__date,
+  .title-section__status {
+    font-size: 16px;
+  }
+
+  .history-card__avatar {
+    margin: 0px 20px 0px 20px;
+  }
+
+  .history-card__username,
+  .history-card__vehicle-model,
+  .history-card__service-type,
+  .history-card__date,
+  .history-card__status {
+    font-size: 16px;
+  }
+
+  .history-card__username {
+    max-width: 150px;
+    margin: 0px 23px 0px 0px ;
+  }
+
+  .history-card__vehicle-model {
+    max-width: 170px;
+    margin: 0px 30px 0px 0px ;
+  }
+
+  .history-card__service-type {
+    max-width: 100px;
+    margin: 0px 55px 0px 0px ;
+  }
+
+  .history-card__date {
+    max-width: 110px;
+    margin: 0px 25px 0px 0px ;
+  }
+  
+  .history-card__status {
+    border-radius: 25px;
+    font-size: 20;
+    font-weight: 700;
+    background-color: #4AD7BD;
+    color: #1B4E50;
+    padding: 12px 10px;
+    margin: 0px 20px 0px 0px ;
+  }
+}
+
+/* TABLET */
+@media (max-width: 991.98px) {
+
+  .booking-section__title-section {
+    display: flex;
+    margin: 20px 0px 20px 0px;
+    align-items: center;
+  }
+
+  .title-section__line {
+    display: none;
+  }
+
+  .title-section__wrapper {
+    align-items: center;
+    justify-content: space-between;
+    column-gap: normal;
+  }
+
+  .history-section__history-card {
+    flex-direction: column;
+    padding: 20px 20px;
+  }
+  
+  .history-card__wrapper {
+    max-width: none;
+    min-height: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+  }
+
+  .history-card__avatar {
+    margin: 0px 0px 20px 0px;
+  }
+
+  .history-card__username,
+  .history-card__vehicle-model,
+  .history-card__service-type,
+  .history-card__date,
+  .history-card__status {
+    max-width: none;
+    text-align: center;
+    margin: 0px 0px 0px 0px ;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 550px) {
+  .title-section__wrapper {
+    flex-direction: column;
+    column-gap: normal;
+    row-gap: 20px;
+  }
+
+  .history-section__history-card {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+}
