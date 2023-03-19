@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/header.css">
   <link rel="stylesheet" href="/css/booking-header.css">
+  <link rel="stylesheet" href="/css/pop-up-section.css">
   <link rel="stylesheet" href="/css/booking-main.css">
   <title>Booking</title>
 </head>
@@ -63,7 +64,65 @@
                 </ul>
               </div>
             </div>
-            <button class="booking-header__book-btn">BOOK</button>
+            <div class="booking-header__book">
+              <button class="booking-header__book-btn">BOOK</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="pop-up-section">
+        <div class="pop-up-section__wrapper">
+          <div class="pop-up-section__pop-up-card pop-up-card">
+            <div class="pop-up-card__pop-up-header">
+              <div class="pop-up-header__title">Booking</div>
+              <div class="pop-up-header__close-btn">&#10006;</div>
+            </div>
+            <div class="pop-up-card__pop-up-main pop-up-main">
+              <form class="pop-up-main__pop-up-form pop-up-form">
+                <div class="pop-up-form__form-element">
+                  <label class="form-elemnt__title" for="vehicle-model">Vehicle Model*</label>
+                  <input class="form-elemnt__input" type="text" id="vehicle-model" required>
+                </div>
+                <div class="pop-up-form__form-element">
+                  <label class="form-elemnt__title" for="first-name">First Name*</label>
+                  <input class="form-elemnt__input" type="text" id="first-name" required>
+                </div>
+                <div class="pop-up-form__form-element">
+                  <label class="form-elemnt__title" for="last-name">Last Name*</label>
+                  <input class="form-elemnt__input" type="text" id="last-name" required>
+                </div>
+                <div class="pop-up-form__form-element">
+                  <label class="form-elemnt__title" for="appointment-date">Your Appointment Date*</label>
+                  <input class="form-elemnt__input" type="text" id="appointment-date" required>
+                </div>
+                <div class="pop-up-form__form-element">
+                  <label class="form-elemnt__title" for="phone-number">Phone Number*</label>
+                  <input class="form-elemnt__input" type="text" id="phone-number" required>
+                </div>
+                <div class="pop-up-form__form-element">
+                  <p class="form-elemnt__title">Service Plan*<p>
+                  <div class="pop-up-form__pop-up-dropdown pop-up-dropdown">
+                    <div class="pop-up-dropdown__select">
+                      <span class="pop-up-dropdown__selected">ULTIMATE</span>
+                      <div class="pop-up-dropdown__caret"></div>
+                    </div>
+                    <ul class="pop-up-dropdown__menu">
+                      <li>BASIC</li>
+                      <li>DELUXE</li>
+                      <li class="pop-up-dropdown__item-active">ULTIMATE</li>
+                      <li>PLATINUM</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="pop-up-form__form-element">
+                  <label class="form-elemnt__title" for="message">Message</label>
+                  <input class="form-elemnt__input" type="text" id="message">
+                </div>
+                <div class="pop-up-form__form-element">
+                  <button class="form-element__confirm-btn" type="submit">CONFIRM</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -114,5 +173,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="/js/script.js"></script>
   <script src="/js/dropdown.js"></script>
+  <script src="/js/service-dropdown.js"></script>
+  <script src="/js/pop-up.js"></script>
 </body>
 </html>
