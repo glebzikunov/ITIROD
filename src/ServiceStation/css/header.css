@@ -38,6 +38,11 @@
 .menu__link {
   font-weight: 500;
   color: #464646;
+  transition: color 0.15s;
+}
+
+.menu__link:hover {
+  color: #022ABF;
 }
 
 .menu__item-avatar {

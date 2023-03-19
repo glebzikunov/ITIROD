@@ -43,13 +43,6 @@
   justify-content: space-between;
 }
 
-.social-links__instagram-link {
-}
-.social-links__twitter-link {
-}
-.social-links__facebook-link {
-}
-
 .social-links__instagram-link img,
 .social-links__twitter-link img,
 .social-links__facebook-link img {
@@ -69,6 +62,10 @@
   font-family: "Exo 2";
   color: #464646;
   margin: 0px 0px 10px 0px;
+}
+
+.footer-card__text:hover {
+  color: #022ABF;
 }
 
 .footer-blue {
