@@ -46,14 +46,14 @@
               <form class="register-card__register-form register-form" action="post">
                 <div class="register-form__input-block">
                   <div class="register-form__item">
-                    <input type="text" class="register-form__username" placeholder="Email Address" required>
+                    <input type="text" class="register-form__username" id="email" placeholder="Email Address" required>
                   </div>
                   <div class="register-form__item">
-                    <input type="password" class="register-form__password" placeholder="Password" required>
+                    <input type="password" class="register-form__password" id="password" placeholder="Password" required>
                   </div>
                 </div>
                 <div class="register-form__item-button">
-                  <button class="register-form__buttom" type="submit">Create Account</button>
+                  <button class="register-form__buttom" type="submit" id="signup">Create Account</button>
                 </div>
               </form>
               <div class="register-card__footer">
@@ -66,10 +66,13 @@
       </section>
     </main>
   </div>
+  <!-- Sweetalerts -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   <!-- Firebase CDN -->
-  <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-analytics.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script> 
 
   <!-- Firebase files  -->
   <script src="/js/firebase/config.js"></script>
