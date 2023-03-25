@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Exo:regular,500,600,700,800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:regular,500,600,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet "/>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/booking-header.css">
+  <link rel="stylesheet" href="/css/pop-up-section.css">
+  <link rel="stylesheet" href="/css/booking-main.css">
+  <title>Booking</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a href="/html/index.html" class="header__logo">
+          <img src="/images/Logo.svg" alt="Logo">
+        </a>
+        <nav class="header__menu menu">
+          <ul class="menu__list">
+            <li class="menu__item"><a href="/html/index.html" class="menu__link">Home</a></li>
+            <li class="menu__item"><a href="/html/booking.html" class="menu__link">Booking</a></li>
+            <li class="menu__item"><a href="" class="menu__link">Logout</a></li>
+            <li class="menu__item">
+              <a href="/html/profile.html" class="menu__link">
+                <img class="menu__item-avatar" src="/images/Profile-avatar.jpg" alt="Profile Avatar">
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__burger-container burger-container">
+          <div class="header__burger">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="booking-header-section">
+        <div class="booking-header-section__container">
+          <div class="booking-header-section__booking-header booking-header">
+            <h1 class="booking-header__title">Booking</h1>
+            <div class="booking-header__sort-block sort-block">
+              <h2 class="sort-block__title">Sort By</h2>
+              <div class="sort-block__dropdown dropdown">
+                <div class="dropdown__select">
+                  <span class="dropdown__selected">All Booking</span>
+                  <div class="dropdown__caret"></div>
+                </div>
+                <ul class="dropdown__menu">
+                  <li>Approved</li>
+                  <li>Pending</li>
+                  <li class="dropdown__item-active">All Booking</li>
+                  <li>Recently Created</li>
+                  <li>Last Created</li>
+                </ul>
+              </div>
+            </div>
+            <div class="booking-header__book">
+              <button class="booking-header__book-btn">BOOK</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="pop-up-section">
+        <div class="pop-up-section__wrapper">
+          <div class="pop-up-section__pop-up-card pop-up-card">
+            <div class="pop-up-card__pop-up-header">
+              <div class="pop-up-header__title">Booking</div>
+              <div class="pop-up-header__close-btn">&#10006;</div>
+            </div>
+            <div class="pop-up-card__pop-up-main pop-up-main">
+              <form class="pop-up-main__pop-up-form pop-up-form">
+                <div class="pop-up-form__form-element">
+                  <label class="form-elemnt__title" for="vehicle-model">Vehicle Model*</label>
+                  <input class="form-elemnt__input" type="text" id="vehicle-model" required>
+                </div>
+                <div class="pop-up-form__form-element">
+                  <label class="form-elemnt__title" for="first-name">First Name*</label>
+                  <input class="form-elemnt__input" type="text" id="first-name" required>
+                </div>
+                <div class="pop-up-form__form-element">
+                  <label class="form-elemnt__title" for="last-name">Last Name*</label>
+                  <input class="form-elemnt__input" type="text" id="last-name" required>
+                </div>
+                <div class="pop-up-form__form-element">
+                  <label class="form-elemnt__title" for="appointment-date">Your Appointment Date*</label>
+                  <input class="form-elemnt__input" type="text" id="appointment-date" required>
+                </div>
+                <div class="pop-up-form__form-element">
+                  <label class="form-elemnt__title" for="phone-number">Phone Number*</label>
+                  <input class="form-elemnt__input" type="text" id="phone-number" required>
+                </div>
+                <div class="pop-up-form__form-element">
+                  <p class="form-elemnt__title">Service Plan*<p>
+                  <div class="pop-up-form__pop-up-dropdown pop-up-dropdown">
+                    <div class="pop-up-dropdown__select">
+                      <span class="pop-up-dropdown__selected">ULTIMATE</span>
+                      <div class="pop-up-dropdown__caret"></div>
+                    </div>
+                    <ul class="pop-up-dropdown__menu">
+                      <li>BASIC</li>
+                      <li>DELUXE</li>
+                      <li class="pop-up-dropdown__item-active">ULTIMATE</li>
+                      <li>PLATINUM</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="pop-up-form__form-element">
+                  <label class="form-elemnt__title" for="message">Message</label>
+                  <input class="form-elemnt__input" type="text" id="message">
+                </div>
+                <div class="pop-up-form__form-element">
+                  <button class="form-element__confirm-btn" type="submit">CONFIRM</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="booking-section">
+        <div class="booking-section__container">
+          <div class="booking-section__wrapper">
+            <div class="booking-section__title-section title-section">
+              <hr class="title-section__line">
+              <div class="title-section__wrapper">
+                <h2 class="title-section__username">USERNAME</h2>
+                <h2 class="title-section__vehicle-model">VEHICLE MODEL</h2>
+                <h2 class="title-section__service-type">SERVICE TYPE</h2>
+                <h2 class="title-section__date">DATE</h2>
+                <h2 class="title-section__status">STATUS</h2>
+              </div>
+            </div>
+            <div class="booking-section__history-section history-section">
+              <div class="history-section__wrapper">
+                <div class="history-section__history-card history-card">
+                  <img class="history-card__avatar" src="/images/Profile-avatar.jpg" alt="Profile Avatar">
+                  <div class="history-card__wrapper">
+                    <p class="history-card__username">zikunov@gmail.com</p>
+                    <p class="history-card__vehicle-model">Honda Accord 5</p>
+                    <p class="history-card__service-type">DELUXE</p>
+                    <p class="history-card__date">Aug. 21, 2023</p>
+                    <button class="history-card__status">Approved</button>
+                    <input class="history-card__checkbox" type="checkbox">
+                  </div>
+                </div>
+                <div class="history-section__history-card history-card">
+                  <img class="history-card__avatar" src="/images/Profile-avatar.jpg" alt="Profile Avatar">
+                  <div class="history-card__wrapper">
+                    <p class="history-card__username">zikunov@gmail.com</p>
+                    <p class="history-card__vehicle-model">Honda Accord 5</p>
+                    <p class="history-card__service-type">DELUXE</p>
+                    <p class="history-card__date">Aug. 21, 2023</p>
+                    <button class="history-card__status">Approved</button>
+                    <input class="history-card__checkbox" type="checkbox">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="/js/script.js"></script>
+  <script src="/js/dropdown.js"></script>
+  <script src="/js/service-dropdown.js"></script>
+  <script src="/js/pop-up.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Exo:regular,500,600,700,800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:regular,500,600,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet "/>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/register-section.css">
+  <title>Register</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a href="/html/index.html" class="header__logo">
+          <img src="/images/Logo.svg" alt="Logo">
+        </a>
+        <nav class="header__menu menu">
+          <ul class="menu__list">
+            <li class="menu__item"><a href="/html/index.html" class="menu__link">Home</a></li>
+            <li class="menu__item"><a href="/html/booking.html" class="menu__link">Booking</a></li>
+            <li class="menu__item"><a href="/html/login.html" class="menu__link">Sign In</a></li>
+            <li class="menu__item"><a href="/html/register.html" class="menu__link">Sign Up</a></li>
+          </ul>
+        </nav>
+        <div class="header__burger-container burger-container">
+          <div class="header__burger">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="register-section">
+        <div class="register-section__container">
+          <div class="register-section__register-card register-card">
+            <div class="register-card__wrapper">
+              <div class="register-card__header">
+                <h1 class="register-card__title">Create An Account</h1>
+                <h2 class="register-card__subtitle">Create an account to enjoy all the services without any ads for free!</h2>
+              </div>
+              <form class="register-card__register-form register-form" action="post">
+                <div class="register-form__input-block">
+                  <div class="register-form__item">
+                    <input type="text" class="register-form__username" placeholder="Email Address" required>
+                  </div>
+                  <div class="register-form__item">
+                    <input type="password" class="register-form__password" placeholder="Password" required>
+                  </div>
+                </div>
+                <div class="register-form__item-button">
+                  <button class="register-form__buttom" type="submit">Create Account</button>
+                </div>
+              </form>
+              <div class="register-card__footer">
+                <p class="register-card__text">Already Have An Account?</p>
+                <a href="" class="register-card__login-link">Sign In</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="/js/script.js"></script>
+</body>
+</html>
