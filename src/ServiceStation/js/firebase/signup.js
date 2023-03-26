@@ -37,7 +37,7 @@ const registerBtn = document.getElementById("signup").onclick = ((e) => {
         icon: 'success',
         title: 'Good job!',
         text: 'You have been successfully registered!',
-        confirmButtonText: 'Login'
+        confirmButtonText: 'Login?'
       }).then(function() {
         window.location.href = "/html/login.html"
       })

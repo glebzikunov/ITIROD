@@ -22,7 +22,7 @@ const loginBtn = document.getElementById("signin").onclick = ((e) => {
         icon: 'error',
         title: 'Oops...',
         text: `${error.message}`,
-        confirmButtonText: 'Try again'
+        confirmButtonText: 'Try again!'
       }).then(function() {
         return false;
       })

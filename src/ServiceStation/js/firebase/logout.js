@@ -5,7 +5,7 @@ document.getElementById("logout").onclick = (() => {
       icon: 'success',
       title: 'Good job!',
       text: 'You have been successfully logged out!',
-      confirmButtonText: 'Login again'
+      confirmButtonText: 'Login again?'
     }).then(function () {
       window.location.href = "/html/login.html"
       return false;
