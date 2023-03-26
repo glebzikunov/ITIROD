@@ -46,14 +46,14 @@
               <form class="login-card__login-form login-form" action="post">
                 <div class="login-form__input-block">
                   <div class="login-form__item">
-                    <input type="text" class="login-form__username" placeholder="Email Address" required>
+                    <input type="text" class="login-form__username" id="email" placeholder="Email Address" required>
                   </div>
                   <div class="login-form__item">
-                    <input type="password" class="login-form__password" placeholder="Password" required>
+                    <input type="password" class="login-form__password" id="password" placeholder="Password" required>
                   </div>
                 </div>
                 <div class="login-form__item-button">
-                  <button class="login-form__buttom" type="submit">Sign In</button>
+                  <button class="login-form__buttom" type="submit" id="signin">Sign In</button>
                 </div>
               </form>
               <div class="login-card__footer">
@@ -76,6 +76,7 @@
 
   <!-- Firebase files  -->
   <script src="/js/firebase/config.js"></script>
+  <script src="/js/firebase/signin.js"></script>
 
   <!-- Jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
