@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="/css/booking-main.css">
   <title>Booking</title>
 </head>
+<script src="/js/firebase/isAuthenticated.js"></script>
 <body>
   <div class="wrapper">
     <header class="header">
@@ -25,7 +26,7 @@
           <ul class="menu__list">
             <li class="menu__item"><a href="/html/index.html" class="menu__link">Home</a></li>
             <li class="menu__item"><a href="/html/booking.html" class="menu__link">Booking</a></li>
-            <li class="menu__item"><a href="" class="menu__link">Logout</a></li>
+            <li class="menu__item"><a href="#" id="logout" class="menu__link">Logout</a></li>
             <li class="menu__item">
               <a href="/html/profile.html" class="menu__link">
                 <img class="menu__item-avatar" src="/images/Profile-avatar.jpg" alt="Profile Avatar">
@@ -177,6 +178,7 @@
 
   <!-- Firebase files  -->
   <script src="/js/firebase/config.js"></script>
+  <script src="/js/firebase/logout.js"></script>
 
   <!-- Jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
