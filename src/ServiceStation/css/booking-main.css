@@ -104,6 +104,7 @@
   font-size: 20px;
   font-weight: 700;
   color: #000;
+  word-break: break-all;
 }
 
 .history-card__username {
@@ -136,7 +137,7 @@
   font-weight: 700;
   background-color: #4AD7BD;
   color: #1B4E50;
-  padding: 12px 10px;
+  padding: 12px 8px;
   margin: 0px 62px 0px 0px ;
 }
 
