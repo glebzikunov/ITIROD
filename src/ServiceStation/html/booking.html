@@ -76,7 +76,7 @@
               <div class="pop-up-header__close-btn">&#10006;</div>
             </div>
             <div class="pop-up-card__pop-up-main pop-up-main">
-              <form class="pop-up-main__pop-up-form pop-up-form">
+              <form class="pop-up-main__pop-up-form pop-up-form" id="booking-form">
                 <div class="pop-up-form__form-element">
                   <label class="form-elemnt__title" for="vehicle-model">Vehicle Model*</label>
                   <input class="form-elemnt__input" type="text" id="vehicle-model" required>
@@ -101,7 +101,7 @@
                   <p class="form-elemnt__title">Service Plan*<p>
                   <div class="pop-up-form__pop-up-dropdown pop-up-dropdown">
                     <div class="pop-up-dropdown__select">
-                      <span class="pop-up-dropdown__selected">ULTIMATE</span>
+                      <span class="pop-up-dropdown__selected" id="dropdown-item">ULTIMATE</span>
                       <div class="pop-up-dropdown__caret"></div>
                     </div>
                     <ul class="pop-up-dropdown__menu">
@@ -138,15 +138,15 @@
               </div>
             </div>
             <div class="booking-section__history-section history-section">
-              <div class="history-section__wrapper">
+              <div class="history-section__wrapper" id="history-section-wrapper">
                 <div class="history-section__history-card history-card">
                   <img class="history-card__avatar" src="/images/Profile-avatar.jpg" alt="Profile Avatar">
                   <div class="history-card__wrapper">
-                    <p class="history-card__username">zikunov@gmail.com</p>
+                    <p class="history-card__username" id="username"></p>
                     <p class="history-card__vehicle-model">Honda Accord 5</p>
                     <p class="history-card__service-type">DELUXE</p>
                     <p class="history-card__date">Aug. 21, 2023</p>
-                    <button class="history-card__status">Approved</button>
+                    <div class="history-card__status">Approved</div>
                     <input class="history-card__checkbox" type="checkbox">
                   </div>
                 </div>
@@ -157,7 +157,7 @@
                     <p class="history-card__vehicle-model">Honda Accord 5</p>
                     <p class="history-card__service-type">DELUXE</p>
                     <p class="history-card__date">Aug. 21, 2023</p>
-                    <button class="history-card__status">Approved</button>
+                    <div class="history-card__status">Approved</div>
                     <input class="history-card__checkbox" type="checkbox">
                   </div>
                 </div>
@@ -178,6 +178,7 @@
 
   <!-- Firebase files  -->
   <script src="/js/firebase/config.js"></script>
+  <script src="/js/firebase/booking.js"></script>
   <script src="/js/firebase/logOut.js"></script>
 
   <!-- Jquery -->
