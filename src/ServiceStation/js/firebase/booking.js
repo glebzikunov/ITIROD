@@ -58,7 +58,7 @@ function renderData(individualDoc) {
   //Status field
   let statusDiv = document.createElement("div");
   statusDiv.classList.add("history-card__status");
-  statusDiv.textContent = "Approved"
+  statusDiv.textContent = "Pending"
 
   //Checkbox
   let checkbox = document.createElement("input");

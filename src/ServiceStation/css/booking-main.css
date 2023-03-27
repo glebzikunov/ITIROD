@@ -132,13 +132,23 @@
 }
 
 .history-card__status {
+  width: 100%;
+  max-width: 110px;
+  min-height: 51px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 25px;
-  font-size: 20;
+  font-size: 20px;
   font-weight: 700;
+  background-color: #0F1730;
+  color: #fff;
+  margin: 0px 62px 0px 0px;
+}
+
+.history-card__status_approved {
   background-color: #4AD7BD;
   color: #1B4E50;
-  padding: 12px 8px;
-  margin: 0px 62px 0px 0px ;
 }
 
 .history-card__checkbox {
@@ -199,12 +209,9 @@
   }
   
   .history-card__status {
-    border-radius: 25px;
-    font-size: 20;
-    font-weight: 700;
-    background-color: #4AD7BD;
-    color: #1B4E50;
-    padding: 12px 10px;
+    max-width: 90px;
+    min-height: 40px;
+    font-size: 18px;
     margin: 0px 20px 0px 0px ;
   }
 }
@@ -249,11 +256,14 @@
   .history-card__username,
   .history-card__vehicle-model,
   .history-card__service-type,
-  .history-card__date,
-  .history-card__status {
+  .history-card__date {
     max-width: none;
     text-align: center;
     margin: 0px 0px 0px 0px ;
+  }
+
+  .history-card__status {
+    margin: 0px;
   }
 }
 
