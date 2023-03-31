@@ -16,7 +16,7 @@ const loginBtn = document.getElementById("signin").onclick = ((e) => {
     firebase.auth().signInWithEmailAndPassword(email, password)
     .then((userCredentials) => {
       sessionStorage.setItem("uid", userCredentials.user.uid)
-      window.location.href = "/html/booking.html"
+      window.location.href = "/html/profile.html"
     }).catch((error) => {
       Swal.fire({
         icon: 'error',
