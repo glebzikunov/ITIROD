@@ -28,7 +28,7 @@ const registerBtn = document.getElementById("signup").onclick = ((e) => {
 
     firebase.auth().createUserWithEmailAndPassword(email, password)
     .then((userCredentials) => {
-      firebase.firestore().collection("users").doc().set({
+      firebase.firestore().collection("users").doc(firebase.auth().currentUser.uid).set({
         email: email,
         userId: userCredentials.user.uid,
         registrationDate: registerDate.getDate() + "." + (registerDate.getMonth() + 1) + "." + registerDate.getFullYear()
