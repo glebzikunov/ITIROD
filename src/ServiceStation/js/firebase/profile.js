@@ -85,6 +85,11 @@ const changeEmail = (user, credential, newEmail) => {
       title: 'Good job!',
       text: 'User email updated successfully!',
     })
+
+    let userRef = firebase.firestore().collection("users").doc(user.uid) 
+    userRef.update({
+      "email": newEmail
+    })
   }).catch(error => {
     Swal.fire({
       icon: 'error',
