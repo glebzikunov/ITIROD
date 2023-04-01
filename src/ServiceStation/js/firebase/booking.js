@@ -92,36 +92,39 @@ let timeCounter = time;
 bookingForm.addEventListener("submit", e => {
   e.preventDefault();
 
-  const dateRegex = /^\d{2}\.\d{2}\.\d{4}$/;
-
   const vehicleModel = bookingForm["vehicle-model"].value;
   const firstName = bookingForm["first-name"].value;
   const lastName = bookingForm["last-name"].value;
-  const appointmentDate = bookingForm["appointment-date"].value;
+  const appointmentDate = new Date(bookingForm["appointment-date"].value);
   const phoneNumber = bookingForm["phone-number"].value;
-  const servicePlan =document.getElementById("dropdown-item").textContent;
+  const servicePlan = document.getElementById("dropdown-item").textContent;
   const message = bookingForm["message"].value;
-
-  if(!dateRegex.test(appointmentDate) && appointmentDate.length > 10) {
+  const today = new Date();
+  const inputDate = new Date(
+                              appointmentDate.getFullYear(),
+                              appointmentDate.getMonth(),
+                              appointmentDate.getDate()
+                            );
+  const currentDate = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+  
+  if(inputDate < currentDate) {
     Swal.fire({
       icon: 'error',
       title: 'Oops...',
-      text: 'Date format must be: DD.MM.YYYY'
+      text: 'Service can be ordered today or any day after!'
     })
     return false;
   } else {
-    const dateParts = appointmentDate.split('.');
-    const date = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
+    bookingForm.reset();
 
     const options = {
       month: 'short',
       day: 'numeric',
       year: 'numeric'
     };
-    const formattedDate = date.toLocaleString('en-US', options);
+    const formattedDate = inputDate.toLocaleString('en-US', options);
 
     let id = timeCounter += 1;
-    bookingForm.reset();
     firebase.auth().onAuthStateChanged(user => {
       if(user) {
         firebase.firestore().collection(user.uid).doc('_' + id).set({
@@ -142,12 +145,7 @@ bookingForm.addEventListener("submit", e => {
             text: `${error.message}`
           })
         })
-      }
-    })
 
-    firebase.auth().onAuthStateChanged(user => {  
-      if(user) {
-        console.log(user.email);
         Email.send({
           SecureToken : "115c094e-9f05-4c94-8fdd-86edad573017",
           To : 'zikunovgatrader@gmail.com',
@@ -166,8 +164,6 @@ bookingForm.addEventListener("submit", e => {
             title: `${message}`
           })
         );
-      } else {
-        console.log("User is not logged in!")
       }
     })
   }
