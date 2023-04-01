@@ -29,7 +29,7 @@
             <li class="menu__item"><a href="#" id="logout" class="menu__link">Logout</a></li>
             <li class="menu__item">
               <a href="/html/profile.html" class="menu__link">
-                <img class="menu__item-avatar" src="/images/Profile-avatar.jpg" alt="Profile Avatar">
+                <img class="menu__item-avatar" id="menu-profile-pic" src="/images/profile.jpg" alt="Profile Avatar">
               </a>
             </li>
           </ul>
@@ -140,20 +140,9 @@
             <div class="booking-section__history-section history-section">
               <div class="history-section__wrapper" id="history-section-wrapper">
                 <div class="history-section__history-card history-card">
-                  <img class="history-card__avatar" src="/images/Profile-avatar.jpg" alt="Profile Avatar">
+                  <img class="history-card__avatar" src="/images/profile.jpg" alt="Profile Avatar">
                   <div class="history-card__wrapper">
                     <p class="history-card__username" id="username"></p>
-                    <p class="history-card__vehicle-model">Honda Accord 5</p>
-                    <p class="history-card__service-type">DELUXE</p>
-                    <p class="history-card__date">Aug. 21, 2023</p>
-                    <div class="history-card__status">Pending</div>
-                    <input class="history-card__checkbox" type="checkbox">
-                  </div>
-                </div>
-                <div class="history-section__history-card history-card">
-                  <img class="history-card__avatar" src="/images/Profile-avatar.jpg" alt="Profile Avatar">
-                  <div class="history-card__wrapper">
-                    <p class="history-card__username">zikunov@gmail.com</p>
                     <p class="history-card__vehicle-model">Honda Accord 5</p>
                     <p class="history-card__service-type">DELUXE</p>
                     <p class="history-card__date">Aug. 21, 2023</p>
@@ -174,7 +163,8 @@
   <!-- Firebase CDN -->
   <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script> 
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script> 
 
   <!-- Firebase files  -->
   <script src="/js/firebase/config.js"></script>
