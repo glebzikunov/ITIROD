@@ -2,14 +2,20 @@
 const bookingContainer = document.getElementById("history-section-wrapper");
 bookingContainer.classList.add("history-section__wrapper");
 
+let menuProfilePicture = document.getElementById("menu-profile-pic");
+let profilePic = '';
+
 // Get username
 firebase.auth().onAuthStateChanged(user => {  
   if(user) {
-    // console.log(user.uid)
-    // console.log(user.email)
-
     const username = document.getElementById("username");
     username.innerText = user.email;
+
+    firebase.storage().ref('users/' + user.uid + `/profile.jpg`).getDownloadURL()
+      .then(imgUrl => {
+        menuProfilePicture.src = imgUrl;
+        profilePic = imgUrl;
+      })
   } else {
     console.log("User is not logged in!")
   }
@@ -24,7 +30,7 @@ function renderData(individualDoc) {
 
   //Card image
   let cardAvatar = document.createElement("img");
-  cardAvatar.src = "/images/Profile-avatar.jpg";
+  cardAvatar.src = profilePic;
   cardAvatar.classList.add("history-card__avatar");
 
   //Wrapper for text fields
