@@ -4,8 +4,7 @@ document.getElementById("logout").onclick = (() => {
     Swal.fire({
       icon: 'success',
       title: 'Good job!',
-      text: 'You have been successfully logged out!',
-      confirmButtonText: 'Login again?'
+      text: 'You have been successfully logged out!'
     }).then(function () {
       window.location.href = "/html/login.html"
       return false;
