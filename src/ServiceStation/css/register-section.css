@@ -113,6 +113,7 @@
 }
 
 .register-form__buttom:hover {
+  cursor: pointer;
   color: #fff;
   background-color: #022ABF;
 }
