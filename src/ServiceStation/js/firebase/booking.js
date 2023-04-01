@@ -144,6 +144,32 @@ bookingForm.addEventListener("submit", e => {
         })
       }
     })
+
+    firebase.auth().onAuthStateChanged(user => {  
+      if(user) {
+        console.log(user.email);
+        Email.send({
+          SecureToken : "115c094e-9f05-4c94-8fdd-86edad573017",
+          To : 'zikunovgatrader@gmail.com',
+          From : user.email,
+          Subject : "New Service!",
+          Body : `First Name: ${firstName} <br>
+                  Last Name: ${lastName} <br>
+                  Vehicle Model: ${vehicleModel} <br>
+                  Appointment Date: ${formattedDate} <br>
+                  Phone Number: ${phoneNumber} <br>
+                  Service Plan: ${servicePlan} <br>
+                  Message: ${message}`
+        }).then(
+          message => Swal.fire({
+            icon: 'info',
+            title: `${message}`
+          })
+        );
+      } else {
+        console.log("User is not logged in!")
+      }
+    })
   }
 })
 
