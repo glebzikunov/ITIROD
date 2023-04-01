@@ -27,7 +27,7 @@
             <li class="menu__item"><a href="" id="logout" class="menu__link">Logout</a></li>
             <li class="menu__item">
               <a href="/html/profile.html" class="menu__link">
-                <img class="menu__item-avatar" src="/images/Profile-avatar.jpg" alt="Profile Avatar">
+                <img class="menu__item-avatar" id="menu-profile-pic" src="/images/profile.jpg" alt="Profile Avatar">
               </a>
             </li>
           </ul>
@@ -47,11 +47,11 @@
               <div class="profile-card__card-header card-header">
                 <div class="card-header__image-block image-block">
                   <img class="image-block__background" src="/images/Profile-background.jpg" alt="Profile Background">
-                  <img src="/images/Profile-avatar.jpg" alt="Profile Picture" class="image-block__profile-picture">
+                  <img class="image-block__profile-picture" id="profile-pic" src="/images/profile.jpg" alt="Profile Picture">
                 </div>
               </div>
-              <input type="file" id="file" accept="image/*">
               <form class="profile-card__form" id="update-form">
+                <input type="file" onchange="chooseFile(event)" id="file" accept="image/*">
                 <label class="picture-change-label" for="file">IMAGE</label>
               <div class="profile-card__input-block">
                 <div class="profile-card__item">
@@ -78,6 +78,7 @@
   <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script> 
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script> 
 
   <!-- Firebase files  -->
   <script src="/js/firebase/config.js"></script>
