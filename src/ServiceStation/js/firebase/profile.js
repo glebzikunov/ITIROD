@@ -1,6 +1,15 @@
+let profilePicture = document.getElementById("profile-pic")
+let menuProfilePicture = document.getElementById("menu-profile-pic")
+let file = {};
+
 firebase.auth().onAuthStateChanged(user => {  
   if(user) {
     $('#username').attr('placeholder', user.email);
+    firebase.storage().ref('users/' + user.uid + `/profile.jpg`).getDownloadURL()
+      .then(imgUrl => {
+        profilePicture.src = imgUrl;
+        menuProfilePicture.src = imgUrl;
+      })
   } else {
     console.log("User is not logged in!")
   }
@@ -14,9 +23,7 @@ updateProfileForm.addEventListener("submit", e => {
   const user = firebase.auth().currentUser;
   const newEmail = updateProfileForm["username"].value;
   const newPassword = updateProfileForm["new-password"].value;
-
   updateProfileForm.reset();
-  console.log(`${newEmail} \n${newPassword}`);
 
   if(newEmail && newPassword) {
     if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(newEmail))) {
@@ -64,8 +71,26 @@ updateProfileForm.addEventListener("submit", e => {
 
       const credential = createCredentials(user);
       changeEmail(user, credential, newEmail);
+  } else if (!jQuery.isEmptyObject(file)) {
+    firebase.storage().ref('users/' + user.uid + `/profile.jpg`).put(file).then(function () {
+      Swal.fire({
+        icon: 'success',
+        title: 'Good job!',
+        text: 'Profile picture have been updated!',
+      })
+    }).catch(error => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: `${error.message}`
+      })
+    })
   }
 })
+
+function chooseFile(e) {
+  file = e.target.files[0];
+}
 
 const createCredentials = (user) => {
   const password = prompt('Password: ');
