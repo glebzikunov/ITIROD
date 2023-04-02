@@ -126,7 +126,35 @@ bookingForm.addEventListener("submit", e => {
       day: 'numeric',
       year: 'numeric'
     };
+
     const formattedDate = inputDate.toLocaleString('en-US', options);
+    const timestampDate = new Date(formattedDate);
+    const timestamp = firebase.firestore.Timestamp.fromDate(timestampDate);
+    const userEmail = firebase.auth().currentUser.email;
+
+    try {
+      Email.send({
+        SecureToken : "115c094e-9f05-4c94-8fdd-86edad573017",
+        To : 'zikunovgatrader@gmail.com',
+        From : userEmail,
+        Subject : "New Service!",
+        Body : `First Name: ${firstName} <br>
+                Last Name: ${lastName} <br>
+                Vehicle Model: ${vehicleModel} <br>
+                Appointment Date: ${formattedDate} <br>
+                Phone Number: ${phoneNumber} <br>
+                Service Plan: ${servicePlan} <br>
+                Message: ${message}`
+      }).then(
+        message => Swal.fire({
+          icon: 'info',
+          title: `${message}`
+        })
+      );
+    } catch (error) {
+      console.log(error.message);
+      return false;
+    }
 
     let id = timeCounter += 1;
     firebase.auth().onAuthStateChanged(user => {
@@ -138,6 +166,7 @@ bookingForm.addEventListener("submit", e => {
           lastName: lastName,
           phone: phoneNumber,
           appointmentDate: formattedDate,
+          timestampDate: timestamp,
           serviceType: servicePlan,
           serviceStatus: "Pending",
           serviceStatusApproved: false,
@@ -152,25 +181,6 @@ bookingForm.addEventListener("submit", e => {
             text: `${error.message}`
           })
         })
-
-        Email.send({
-          SecureToken : "115c094e-9f05-4c94-8fdd-86edad573017",
-          To : 'zikunovgatrader@gmail.com',
-          From : user.email,
-          Subject : "New Service!",
-          Body : `First Name: ${firstName} <br>
-                  Last Name: ${lastName} <br>
-                  Vehicle Model: ${vehicleModel} <br>
-                  Appointment Date: ${formattedDate} <br>
-                  Phone Number: ${phoneNumber} <br>
-                  Service Plan: ${servicePlan} <br>
-                  Message: ${message}`
-        }).then(
-          message => Swal.fire({
-            icon: 'info',
-            title: `${message}`
-          })
-        );
       }
     })
   }
@@ -199,13 +209,13 @@ firebase.auth().onAuthStateChanged(user => {
         const selectedItem = document.getElementById('dropdown-item-sorted');
         selectedItem.textContent = item.textContent;
         if (selectedItem.textContent === "Desc Date") {
-          firebase.firestore().collection(user.uid).orderBy("appointmentDate", "desc").get().then((snapshot) => {
+          firebase.firestore().collection(user.uid).orderBy("timestampDate", "desc").get().then((snapshot) => {
             snapshot.forEach(doc => {
               renderData(doc);
             })
           })
         } else if (selectedItem.textContent === "Asc Date") {
-          firebase.firestore().collection(user.uid).orderBy("appointmentDate", "asc").get().then((snapshot) => {
+          firebase.firestore().collection(user.uid).orderBy("timestampDate", "asc").get().then((snapshot) => {
             snapshot.forEach(doc => {
               renderData(doc);
             })
