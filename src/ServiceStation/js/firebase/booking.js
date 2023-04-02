@@ -1,3 +1,7 @@
+document.querySelector(".sort-block__sort-btn").addEventListener("click", function() {
+  console.log(document.getElementById('dropdown-item-sorted').textContent)
+});
+
 //History section container
 const bookingContainer = document.getElementById("history-section-wrapper");
 bookingContainer.classList.add("history-section__wrapper");
@@ -27,7 +31,11 @@ function renderData(individualDoc) {
 
   //Card image
   let cardAvatar = document.createElement("img");
-  cardAvatar.src = profilePic;
+  if(profilePic) {
+    cardAvatar.src = profilePic;
+  } else {
+    cardAvatar.src = "/images/profile.jpg";
+  }
   cardAvatar.classList.add("history-card__avatar");
 
   //Wrapper for text fields
@@ -48,20 +56,23 @@ function renderData(individualDoc) {
   
   let vehicle = document.createElement("p");
   vehicle.classList.add("history-card__vehicle-model");
-  vehicle.innerText = individualDoc.data().vehicleModel;
+  vehicle.innerText = individualDoc.data().vehicle;
 
   let serviceType = document.createElement("p");
   serviceType.classList.add("history-card__service-type");
-  serviceType.innerText = individualDoc.data().servicePlan;
+  serviceType.innerText = individualDoc.data().serviceType;
 
   let serviceDate = document.createElement("p");
   serviceDate.classList.add("history-card__date");
-  serviceDate.innerText = individualDoc.data().formattedDate;
+  serviceDate.innerText = individualDoc.data().appointmentDate;
 
   //Status field
   let statusDiv = document.createElement("div");
-  statusDiv.classList.add("history-card__status");
-  statusDiv.textContent = "Pending"
+  statusDiv.classList.add(individualDoc.data().serviceStatusStyle);
+  if(individualDoc.data().serviceStatusApproved) {
+    statusDiv.classList.add("history-card__status_approved");
+  }
+  statusDiv.textContent = individualDoc.data().serviceStatus;
 
   //Checkbox
   let checkbox = document.createElement("input");
@@ -126,13 +137,16 @@ bookingForm.addEventListener("submit", e => {
       if(user) {
         firebase.firestore().collection(user.uid).doc('_' + id).set({
           id: '_' + id,
-          vehicleModel,
-          firstName,
-          lastName,
-          formattedDate,
-          phoneNumber,
-          servicePlan,
-          message
+          vehicle: vehicleModel,
+          firstName: firstName,
+          lastName: lastName,
+          phone: phoneNumber,
+          appointmentDate: formattedDate,
+          serviceType: servicePlan,
+          serviceStatus: "Pending",
+          serviceStatusApproved: false,
+          serviceStatusStyle: "history-card__status",
+          message: message
         }).then(() => {
           console.log("Booking added")
         }).catch(error => {
