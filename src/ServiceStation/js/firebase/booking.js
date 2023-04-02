@@ -1,7 +1,3 @@
-document.querySelector(".sort-block__sort-btn").addEventListener("click", function() {
-  console.log(document.getElementById('dropdown-item-sorted').textContent)
-});
-
 //History section container
 const bookingContainer = document.getElementById("history-section-wrapper");
 bookingContainer.classList.add("history-section__wrapper");
