@@ -220,6 +220,18 @@ firebase.auth().onAuthStateChanged(user => {
               renderData(doc);
             })
           })
+        } else if (selectedItem.textContent === "Approved") {
+          firebase.firestore().collection(user.uid).where("serviceStatus", "==", "Approved").get().then((snapshot) => {
+            snapshot.forEach(doc => {
+              renderData(doc);
+            })
+          })
+        } else if (selectedItem.textContent === "Pending") {
+          firebase.firestore().collection(user.uid).where("serviceStatus", "==", "Pending").get().then((snapshot) => {
+            snapshot.forEach(doc => {
+              renderData(doc);
+            })
+          })
         } else if (selectedItem.textContent === "All Booking") {
           firebase.firestore().collection(user.uid).get().then((snapshot) => {
             snapshot.forEach(doc => {
