@@ -121,6 +121,10 @@
   border-radius: 6px;
   padding: 15px 16px 15px 16px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .dropdown__menu li:hover {
