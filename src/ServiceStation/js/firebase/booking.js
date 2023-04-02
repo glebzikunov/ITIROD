@@ -8,9 +8,6 @@ let profilePic = '';
 // Get username
 firebase.auth().onAuthStateChanged(user => {  
   if(user) {
-    const username = document.getElementById("username");
-    username.innerText = user.email;
-
     firebase.storage().ref('users/' + user.uid + `/profile.jpg`).getDownloadURL()
       .then(imgUrl => {
         menuProfilePicture.src = imgUrl;
@@ -173,16 +170,45 @@ bookingForm.addEventListener("submit", e => {
 firebase.auth().onAuthStateChanged(user => {
   if(user) {
     firebase.firestore().collection(user.uid).onSnapshot(snapshot => {
-      let changes = snapshot.docChanges();
-      changes.forEach(change => {
-        if(change.type === "added") {
-          renderData(change.doc)
-        }
-        else if(change.type === "removed") {
-          let li = bookingContainer.querySelector("[data-id=" + change.doc.id + "]");
-          bookingContainer.removeChild(li);
-        }
-      })
+        bookingContainer.innerHTML = '';
+        let changes = snapshot.docChanges();
+        changes.forEach(change => {
+            if(change.type === "added") {
+                renderData(change.doc)
+            }
+            else if(change.type === "removed") {
+                let li = bookingContainer.querySelector("[data-id=" + change.doc.id + "]");
+                bookingContainer.removeChild(li);
+            }
+        })
     })
+
+    // Получаем элементы списка и добавляем обработчик событий
+    const dropdownItems = document.querySelectorAll('.dropdown__menu li');
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const selectedItem = document.getElementById('dropdown-item-sorted');
+            selectedItem.textContent = item.textContent;
+            if (selectedItem.textContent === "Recently Created") {
+                firebase.firestore().collection(user.uid).orderBy("formattedDate", "desc").get().then((snapshot) => {
+                    snapshot.forEach(doc => {
+                        renderData(doc);
+                    })
+                })
+            } else if (selectedItem.textContent === "All Booking") {
+                firebase.firestore().collection(user.uid).get().then((snapshot) => {
+                    snapshot.forEach(doc => {
+                        renderData(doc);
+                    })
+                })
+            }
+        })
+    })
+
+    // Наблюдатель за изменениями в элементе span
+    const observer = new MutationObserver(() => {
+        bookingContainer.innerHTML = '';
+    });
+    observer.observe(document.getElementById('dropdown-item-sorted'), { childList: true });
   }
 })
