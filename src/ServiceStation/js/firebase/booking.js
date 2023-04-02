@@ -199,13 +199,13 @@ firebase.auth().onAuthStateChanged(user => {
         const selectedItem = document.getElementById('dropdown-item-sorted');
         selectedItem.textContent = item.textContent;
         if (selectedItem.textContent === "Desc Date") {
-          firebase.firestore().collection(user.uid).orderBy("formattedDate", "desc").get().then((snapshot) => {
+          firebase.firestore().collection(user.uid).orderBy("appointmentDate", "desc").get().then((snapshot) => {
             snapshot.forEach(doc => {
               renderData(doc);
             })
           })
         } else if (selectedItem.textContent === "Asc Date") {
-          firebase.firestore().collection(user.uid).orderBy("formattedDate", "asc").get().then((snapshot) => {
+          firebase.firestore().collection(user.uid).orderBy("appointmentDate", "asc").get().then((snapshot) => {
             snapshot.forEach(doc => {
               renderData(doc);
             })
